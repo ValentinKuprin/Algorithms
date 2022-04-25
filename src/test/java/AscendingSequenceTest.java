@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) //Анатация для порядка тестов
