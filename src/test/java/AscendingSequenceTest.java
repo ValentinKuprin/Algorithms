@@ -34,9 +34,9 @@ public class AscendingSequenceTest {
     @Order(2)
     @Test
     public void testAscendingSequenceHappyPathNegativeNumber() {
-        // -10, -9, -8, -7, -6, -5
+
         int start = -10;
-        int end = -5;    // 1ая А(arrange)-патерн отвечает за установку всех значений
+        int end = -5;
         int step = 1;
         int[] expectedResult = {-10, -9, -8, -7, -6, -5};
 
@@ -49,9 +49,9 @@ public class AscendingSequenceTest {
     @Order(3)
     @Test
     public void testAscendingSequenceHappyPathNegativePositiveNumber() {
-        // -10, -9, -8, -7, -6, -5
+
         int start = -5;
-        int end = 5;    // 1ая А(arrange)-патерн отвечает за установку всех значений
+        int end = 5;
         int step = 1;
         int[] expectedResult = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
 
@@ -64,9 +64,9 @@ public class AscendingSequenceTest {
     @Order(4)
     @Test
     public void testAscendingSequenceHappyPathStepTwo() {
-        // -10, -9, -8, -7, -6, -5
+
         int start = 0;
-        int end = 5;    // 1ая А(arrange)-патерн отвечает за установку всех значений
+        int end = 5;
         int step = 2;
         int[] expectedResult = {0, 2, 4};
 
@@ -78,9 +78,9 @@ public class AscendingSequenceTest {
 
     @Test
     public void testAscendingSequenceStartLargerThenEnd() {
-        // -10, -9, -8, -7, -6, -5
+
         int start = 5;
-        int end = 0;    // 1ая А(arrange)-патерн отвечает за установку всех значений
+        int end = 0;
         int step = 2;
         int[] expectedResult = {};
 
@@ -92,9 +92,9 @@ public class AscendingSequenceTest {
 
     @Test
     public void testAscendingSequenceNegativeStep() {
-        // -10, -9, -8, -7, -6, -5
+
         int start = 0;
-        int end = 5;    // 1ая А(arrange)-патерн отвечает за установку всех значений
+        int end = 5;
         int step = -1;
         int[] expectedResult = {};
 
@@ -106,9 +106,9 @@ public class AscendingSequenceTest {
 
     @Test
     public void testAscendingSequenceStepIsZero() {
-        // -10, -9, -8, -7, -6, -5
+
         int start = 0;
-        int end = 5;    // 1ая А(arrange)-патерн отвечает за установку всех значений
+        int end = 5;
         int step = 0;
         int[] expectedResult = {};
 
