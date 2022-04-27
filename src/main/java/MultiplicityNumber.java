@@ -7,7 +7,7 @@
  */
 public class MultiplicityNumber {
 
-    public static String getMultipleNumber(int m) {
+    public String getMultipleNumber(int m) {
 
         if (m % 3 == 0 && m % 5 != 0) {
             return "Incorrect number";
@@ -20,17 +20,17 @@ public class MultiplicityNumber {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println("Если м = " + getMultipleNumber( 0));
-        System.out.println(getMultipleNumber(3));
-        System.out.println(getMultipleNumber(5));
-        System.out.println(getMultipleNumber(6));
-        System.out.println(getMultipleNumber(9));
-        System.out.println(getMultipleNumber(12));
-        System.out.println(getMultipleNumber(15));
-        System.out.println(getMultipleNumber(18));
-        System.out.println(getMultipleNumber(21));
+ //  public static void main(String[] args) {
+ //      System.out.println("Если м = " + getMultipleNumber( 0));
+ //      System.out.println(getMultipleNumber(3));
+ //      System.out.println(getMultipleNumber(5));
+ //      System.out.println(getMultipleNumber(6));
+ //      System.out.println(getMultipleNumber(9));
+ //      System.out.println(getMultipleNumber(12));
+ //      System.out.println(getMultipleNumber(15));
+ //      System.out.println(getMultipleNumber(18));
+ //      System.out.println(getMultipleNumber(21));
 
 
-    }
+ //  }
 }
