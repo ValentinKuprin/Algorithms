@@ -7,7 +7,7 @@ public class OddIndicesTest {
 
     @Order(1)
     @Test
-    public void OddIndicesHappyPath() {
+    public void testOddIndicesHappyPath() {
 
         int[] array = new int[] {-45, 590, 234, 985, 12, 68};
         int[] expectedResult =  {590, 985, 68};
@@ -19,7 +19,7 @@ public class OddIndicesTest {
 
     @Order(2)
     @Test
-    public void OddIndicesEmptyArray() {
+    public void testOddIndicesEmptyArray() {
 
         int[] array = new int[] {};
         int[] expectedResult =  {};
@@ -31,7 +31,7 @@ public class OddIndicesTest {
 
     @Order(3)
     @Test
-    public void OddIndicesOneNumber() {
+    public void testOddIndicesOneNumber() {
 
         int[] array = new int[] {-1};
         int[] expectedResult =  {};
@@ -40,6 +40,7 @@ public class OddIndicesTest {
         int[] actualResult = oddIndies.OddIndices(array);
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
+
 
 
 

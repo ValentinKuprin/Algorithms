@@ -9,7 +9,7 @@ public class OddIndices {
      * Expected Result =  {590, 985, 68}
      */
 
-    public static int[] OddIndices(int[] array) {
+    public int[] OddIndices(int[] array) {
         int count = 0;
         if (array.length > 0) {
             for (int i = 1; i < array.length; i += 2) {
@@ -27,13 +27,5 @@ public class OddIndices {
         return new int[]{};
     }
 
-
-    public static void main(String[] args) {
-
-
-        int[] array = new int[]{1};
-        System.out.println(Arrays.toString(OddIndices(array)));
-
-    }
 
 }
