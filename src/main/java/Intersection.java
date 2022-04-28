@@ -22,8 +22,6 @@ public class Intersection {
                     if (array[i] == array1[j] && count <= sumArray.length) {
                         sumArray[a] = array[i];
                         a++;
-
-
                     }
                 }
             }
