@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /** Написать алгоритм Intersection, который принимает на вход 2 массива целых чисел и возвращает массив общих элементов.
  Test Data:
  {1, 2, 4, 5, 89}, {8, 9, 4, 2} → {2, 4}
@@ -25,8 +27,15 @@ public class Intersection {
                     }
                 }
             }
-            return sumArray;
+            //System.out.println(Arrays.toString()));
+            return Utils.getUniqueNumbers(sumArray);
         }
         return new int[]{};
+   }
+//
+//    public static void main(String[] args) {
+//        int[] array = {1,2,3,4,2,5,3};
+//        int[] array1 = {1,3,7,8,3,5,9,3};
+//        System.out.println(Arrays.toString(Intersection(array, array1)));
     }
-}
+

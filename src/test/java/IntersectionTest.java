@@ -55,6 +55,18 @@ public class IntersectionTest {
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Order(5)
+    @Test
+    public void testIntersectionDuplicatesNumbers() {
+        int[] array = new int[]{1,2,3,4,2,5,3};
+        int[] array1 = new int[]{1,3,7,8,3,5,9,3};
+        int[] expectedResult = new int[]{1, 3, 5};
+
+        Intersection intersection = new Intersection();
+        int[] actualResult = intersection.Intersection(array, array1);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
 
 
 }
