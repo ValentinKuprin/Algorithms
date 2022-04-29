@@ -127,7 +127,7 @@ public class MinMaxAveTest_NAPICAT_TESts {
 
     @Order(9)
     @Test
-    public void testMinMaxAvethe1() { // индес б больше индекса а, как должна вести себя программа ? какие условия должны быть
+    public void testMinMaxAvethe3421() { // индес б больше индекса а, как должна вести себя программа ? какие условия должны быть
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8};//?
         int a = 3;
         int b = 5;
@@ -136,12 +136,13 @@ public class MinMaxAveTest_NAPICAT_TESts {
         MinMaxAve minMaxAve = new MinMaxAve();
         int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
         Assertions.assertArrayEquals(expectedResult, actualResult);
+        //TODO: придумать имя
 
     }
 
     @Order(10)
     @Test
-    public void testMinMaxAvethe1() { // индекс б отрицательный
+    public void testMinMaxAvethe16464() { // индекс б отрицательный
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8};//?
         int a = 3;
         int b = -5;
@@ -150,6 +151,6 @@ public class MinMaxAveTest_NAPICAT_TESts {
         MinMaxAve minMaxAve = new MinMaxAve();
         int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
         Assertions.assertArrayEquals(expectedResult, actualResult);
-
+//TODO: придумать имя
     }
 }

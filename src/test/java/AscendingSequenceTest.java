@@ -3,16 +3,16 @@ import org.junit.jupiter.api.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) //Анатация для порядка тестов
 
 public class AscendingSequenceTest {
-    AscendingSequence as;
+//    AscendingSequence as;
 
-    @BeforeEach
-        // Выполняется перед каждым тестом (прикондишн)
-    void setUp() {
-        as = new AscendingSequence();
-    }
+//    @BeforeEach
+//        // Выполняется перед каждым тестом (прикондишн)
+//    void setUp() {
+//        as = new AscendingSequence();
+//    }
 
     @Order(1) // - порядок запуска тестов
-    @RepeatedTest(50) // Сначала выполняется @Order(1)б после тест повторяется еще 50 раз
+    //@RepeatedTest(1) // Сначала выполняется @Order(1)б после тест повторяется еще 50 раз
     @Test
     public void testAscendingSequenceHappyPathPositiveNumber() {
         // 0, 1, 2, 3, 4, 5
@@ -24,7 +24,7 @@ public class AscendingSequenceTest {
         //  Ascendingsequence(Тип данных) ascendingsequence(объект класса).
         //при static мы вызывали методы от класса, теперь мы вызываем от объекта класс
         // для этого создаем объект
-        // AscendingSequence as = new AscendingSequence(); - ВЫНЕСЛИ В setUp() !
+         AscendingSequence as = new AscendingSequence(); //- ВЫНЕСЛИ В setUp() !
         int[] actualResult = as.ascendingSequenceAlgorithm(start, end, step); // 2ая А(Act)-патерн, отвечает за действия (когда получаем актуальный результат)
 //сначала ожидаемый результат потом актуальный ! в джейюнит ! в тест нджи наоборот !!
         Assertions.assertArrayEquals(expectedResult, actualResult); // 3я А(Assert)-патерн, сравнение ОР с ФР
