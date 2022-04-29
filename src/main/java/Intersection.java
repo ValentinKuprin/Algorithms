@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import Utils.Utils;
 
 /** Написать алгоритм Intersection, который принимает на вход 2 массива целых чисел и возвращает массив общих элементов.
  Test Data:

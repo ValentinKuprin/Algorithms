@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class ReverseArray {
 
     public int[] getReverseArray(int[] array) {
-        if (array.length < 0) {
+        if (array.length <= 0) {
             return new int[]{};
         }
         int[] reverseArray = new int[array.length];
