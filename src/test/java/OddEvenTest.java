@@ -1,6 +1,13 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+//Input = 2345 -> "Odd"
+//Input = 2344 -> "Even"
+//Input = 0 -> "Even"
+//Input = -2340 -> "Even"
+//Input = -347 -> "Odd"
+//Input= 2147483647 + 1 -> "Undefined"
+//Input= -2147483648 - 1 -> "Undefined"
 
 public class OddEvenTest {
 

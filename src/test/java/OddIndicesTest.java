@@ -1,6 +1,13 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+//Input = {} → {}
+//Input = {-46} → {}
+//"testOddIndicesEvenLength
+//array = {-45, 590, 234, 985, 12, 68} -> {590, 985, 68}"
+//"testOddIndicesOddArrayLength
+//array = {-45, 590, 234, 985, 12, 68, -234,34,-076} ->
+//{590,985,68,34}"
 
 public class OddIndicesTest {
 
@@ -40,6 +47,7 @@ public class OddIndicesTest {
         int[] actualResult = oddIndies.OddIndices(array);
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
+
 
 
 

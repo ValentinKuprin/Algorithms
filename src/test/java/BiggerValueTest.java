@@ -1,6 +1,15 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+//MIN_VALUE, 0 →  0
+//MIN_VALUE, MAX_VALUE → MAX_VALUE
+//2, 2 → 2
+//23456,23455 -> 23456
+//23456,2345578 -> 2345578
+//-78,123 -> 123
+//-78,-56 -> -56
+//Integer.MAX_VALUE + 1, 123 ->123
+//Integer.MIN_VALUE - 1; 123 -> firstNumber
 
 public class BiggerValueTest {
 

@@ -1,6 +1,16 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+//({1, 2, 3, 4, 5, 6, 7, 8}, -6, 2) →  {}
+//({1, 2, 3, 4, 5, 6, 7, 8}, 6, -2) →  {}
+//"({1, 2, 3, 4, 5, 6, 7, 8}, 6, 2) →  {}
+//Anna's algorithm also work with that case:
+//({4, 7, 1, 5, 9, 2, 3, 6, 8},5,2) -> {1.0, 9.0, 4.2}"
+//({}) →  {}
+//({1, 2, 3, 4, 5, 6, 7, 8}, 0, 0) →  {1,1,1}
+//({-100, -2, -3, -4, 4, 3, 2, 100}, 0, 7) →  {-100,100,0}
+//({4, 7, 1, 5, 9, 2, 3, 6, 8},1,10) -> {}
+//({5},0,0) -> {5.0,5.0,5.0}
 
 public class MinMaxAveTest_NAPICAT_TESts {
 

@@ -1,6 +1,13 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+//555 -> true
+//0 -> true
+//-555 -> false
+//Integer.MAX_VALUE + 1 -> false
+//Integer.MAX_VALUE - 1 -> true
+//Integer.MAX_VALUE  -> true
+//Integer.MIN_VALUE  -> false
 
 public class IsPositiveNumberTest {
 
