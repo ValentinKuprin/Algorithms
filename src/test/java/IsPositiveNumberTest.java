@@ -14,33 +14,55 @@ public class IsPositiveNumberTest {
     @Order(1)
     @Test
     public void testIsPositiveNumberHappyPathPositiveNumber() {
-        int a = 555;
+        int number = 555;
         boolean expectedResult = true;
 
         IsPositiveNumber isPositiveNumber = new IsPositiveNumber();
-        boolean actualResult = isPositiveNumber.IsPositiveNumber(a);
+        boolean actualResult = isPositiveNumber.IsPositiveNumber(number);
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Order(2)
     @Test
     public void testIsPositiveNumberHappyPathNumberIsZero() {
-        int a = 0;
+        int number = 0;
         boolean expectedResult = true;
 
         IsPositiveNumber isPositiveNumber = new IsPositiveNumber();
-        boolean actualResult = isPositiveNumber.IsPositiveNumber(a);
+        boolean actualResult = isPositiveNumber.IsPositiveNumber(number);
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
     @Order(3)
     @Test
     public void testIsPositiveNumberHappyPathNegativeNumber() {
-        int a = -555;
+        int number = -555;
         boolean expectedResult = false;
 
         IsPositiveNumber isPositiveNumber = new IsPositiveNumber();
-        boolean actualResult = isPositiveNumber.IsPositiveNumber(a);
+        boolean actualResult = isPositiveNumber.IsPositiveNumber(number);
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Order(4)
+    @Test
+    public void testIsPositiveNumberHappyPathMaxValue() {
+        int number = Integer.MAX_VALUE;
+        boolean expectedResult = true;
+
+        IsPositiveNumber isPositiveNumber = new IsPositiveNumber();
+        boolean actualResult = isPositiveNumber.IsPositiveNumber(number);
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Order(5)
+    @Test
+    public void testIsPositiveNumberHappyPathMinValue() {
+        int number = Integer.MIN_VALUE;
+        boolean expectedResult = false;
+
+        IsPositiveNumber isPositiveNumber = new IsPositiveNumber();
+        boolean actualResult = isPositiveNumber.IsPositiveNumber(number);
         Assertions.assertEquals(expectedResult, actualResult);
     }
 }

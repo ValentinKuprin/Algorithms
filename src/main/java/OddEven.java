@@ -4,14 +4,17 @@ public class OddEven {
 
 Test Data:  -345 →  “Odd”         0 →  “Even”       222222 →  “Even”         2147483647 + 1 →  “Undefined”    */
 
-    public String getOddOrEven(Long a) {
-        if (a >= Integer.MIN_VALUE && a <= Integer.MAX_VALUE) {
-            if (a % 2 != 0) {
+    public String getOddOrEven(Long number) {
+        if (number >= Integer.MIN_VALUE && number <= Integer.MAX_VALUE) {
+            if (number % 2 != 0) {
+
                 return "Odd";
-            } else if (a % 2 == 0) {
+            } else if (number % 2 == 0) {
+
                 return "Even";
             }
         }
+
         return "Undefined";
     }
 

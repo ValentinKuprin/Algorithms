@@ -16,11 +16,13 @@ public class OddIndices {
                 count++;
             }
 
-            int[] arrayOddIndices = new int[count];
+            int[] arrayOddIndices = new int[count];// или array.length / 2 = длинна нечетного массива
             int j = 0;
             for (int i = 1; i < array.length; i += 2) {
-                arrayOddIndices[j] = array[i];
-                j++;
+                if (arrayOddIndices[j] < arrayOddIndices.length) {
+                    arrayOddIndices[j] = array[i];
+                    j++;
+                }
             }
             return arrayOddIndices;
         }

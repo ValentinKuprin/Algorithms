@@ -5,14 +5,16 @@
  */
 public class AreNumbersEqual {
 
-    public int getAreNumbersEqual(int a, int b) {
-        if (a == b) {
-            return 0;
-        } else if (a < b) {
-            return -1;
-        } else if (a > b) {
-        }
+    public int getAreNumbersEqual(int num1, int b) {
+        if (num1 == b) {
 
-        return 1;
+            return 0;
+        } else if (num1 < b) {
+
+            return -1;
+        } else {
+
+            return 1;
+        }
     }
 }

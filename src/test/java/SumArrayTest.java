@@ -70,6 +70,18 @@ public class SumArrayTest {
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
+    @Order(5)
+    @Test
+    public void testGetSumArrayOneIndexArrayIntMaxValue() {
+
+        int[] array = new int[] {2147483647 + 1};
+        int expectedResult = 2147483647 + 1;
+
+        SumArray sumArray = new SumArray();
+        int actualResult = sumArray.getSumArray(array);
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
 
 
 }

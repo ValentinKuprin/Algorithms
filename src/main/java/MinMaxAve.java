@@ -8,34 +8,45 @@ import java.util.Arrays;
 
 public class MinMaxAve {
 
-    public int[] getMinMaxAve(int[] array, int a, int b) {
-        if (array.length > 0 && a <= b && a >= 0) {
+    public static int[] getMinMaxAve(int[] array, int a, int b) {
+        if (array != null) { // array != null || array.length > 0 почему ломает ?! тест падает на пустом массиве
+            if (array.length > 0 && a <= b && a >= 0 && b > 0 && b < array.length) {
+                if ( a > b){
+                    int temp = a;
+                    a = b;
+                    b = temp;
+                }
+                int[] MinMaxAve = new int[3];
+                int min = array[a];
+                int max = array[a];
+                int sum = 0;
+                int avarage = 0;
+                for (int i = a; i <= b; i++) {
+                    if (min > array[i]) {
+                        min = array[i];
+                    }
+                    if (max < array[i]) {
+                        max = array[i];
+                    }
+                    sum += array[i];
+                    avarage = sum / (b - a + 1);
 
-            int[] MinMaxAve = new int[3];
-            int min = array[a];
-            int max = array[a];
-            int sum = 0;
-            int avarage = 0;
-            int count = 0;
-            for (int i = a; i <= b; i++) {
-                if (min > array[i]) {
-                    min = array[i];
                 }
-                if (max < array[i]) {
-                    max = array[i];
-                }
-                sum += array[i];
-                count++;
-                avarage = sum / count;
+
+                return MinMaxAve = new int[]{min, max, avarage};
 
             }
-
-            return MinMaxAve = new int[]{min, max, avarage};
-
+            return new int[]{};
         }
-
         return new int[]{};
     }
+
+//       public static void main(String[] args) {
+//               int[] array = null;
+//
+//               System.out.println(Arrays.toString(getMinMaxAve(array, 0, 7)));
+//
+//           }
 }
 
 

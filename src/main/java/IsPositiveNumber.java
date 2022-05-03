@@ -4,10 +4,17 @@
 
 public class IsPositiveNumber {
 
-    public boolean IsPositiveNumber(int a) {
-        if (a < 0) {
+    public boolean IsPositiveNumber(int number) {
+        if (number < 0) {
             return false;
         }
         return true;
     }
+
+//    public boolean IsPositiveNumber1(int number) {
+//        return  number >= 0? true : false;
+//        num1 >= num2 & num1 : num2;
+//
+//    }
+
 }

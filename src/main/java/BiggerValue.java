@@ -8,9 +8,11 @@ public class BiggerValue {
 
     public int getBiggerValue(int a, int b) {
         if (a <= Integer.MAX_VALUE && a >= Integer.MIN_VALUE || b <= Integer.MAX_VALUE && b >= Integer.MIN_VALUE) {
-            int max = Math.max(a, b);
-        return max;
-    }
+            if (a >= b) {
+                return a;
+            }
+            return b;
+        }
         return Integer.MIN_VALUE;
     }
 

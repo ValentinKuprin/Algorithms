@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-public class SortArrayTest {
+public class SortoffArrayTest {
 
     @Order(1)
     @Test

@@ -10,12 +10,16 @@ public class MultiplicityNumber {
     public String getMultipleNumber(int m) {
 
         if (m % 3 == 0 && m % 5 != 0) {
+
             return "Incorrect number";
         } else if (m % 5 == 0 && m % 3 != 0) {
+
             return "Bad number";
         } else if (m % 3 == 0 && m % 5 == 0) {
+
             return "Good number";
         } else {
+
             return "-1";
         }
     }

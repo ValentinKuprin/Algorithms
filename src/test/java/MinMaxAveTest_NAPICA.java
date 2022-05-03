@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 //({4, 7, 1, 5, 9, 2, 3, 6, 8},1,10) -> {}
 //({5},0,0) -> {5.0,5.0,5.0}
 
-public class MinMaxAveTest_NAPICAT_TESts {
+public class MinMaxAveTest_NAPICA {
 
 
     @Order(1)
@@ -74,7 +74,7 @@ public class MinMaxAveTest_NAPICAT_TESts {
         int[] array = new int[]{};
         int a = 0;
         int b = 7;
-        int[] expectedResult = {};
+        int[] expectedResult = new int[]{};
 
         MinMaxAve minMaxAve = new MinMaxAve();
         int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
@@ -121,26 +121,14 @@ public class MinMaxAveTest_NAPICAT_TESts {
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
-    @Order(8)
-    @Test
-    public void testMinMaxAvethe() { // массив короче индекса б
-        int[] array = new int[]{0, 0, 0, 0, 0, 0};
-        int a = 0;
-        int b = 7;
-        int[] expectedResult = {};
 
-        MinMaxAve minMaxAve = new MinMaxAve();
-        int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
-        Assertions.assertArrayEquals(expectedResult, actualResult);
-
-    }
 
     @Order(9)
     @Test
-    public void testMinMaxAvethe3421() { // индес б больше индекса а, как должна вести себя программа ? какие условия должны быть
+    public void testMinMaxAvetheIndexAMoreIndexB() { // и
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8};//?
-        int a = 3;
-        int b = 5;
+        int a = 5;
+        int b = 3;
         int[] expectedResult = {};
 
         MinMaxAve minMaxAve = new MinMaxAve();
@@ -163,4 +151,20 @@ public class MinMaxAveTest_NAPICAT_TESts {
         Assertions.assertArrayEquals(expectedResult, actualResult);
 //TODO: придумать имя
     }
+
+    @Order(10)
+    @Test
+    public void testMinMaxAveArrayIsNull() { // индекс б отрицательный
+        int[] array = null;//?
+        int a = 3;
+        int b = -5;
+        int[] expectedResult = {};
+
+        MinMaxAve minMaxAve = new MinMaxAve();
+        int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+//TODO: придумать имя
+    }
+
+
 }

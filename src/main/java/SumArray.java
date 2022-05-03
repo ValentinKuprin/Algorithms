@@ -11,8 +11,10 @@ public class SumArray {
             for (int i = 0; i < array.length; i++) {
                 sumArray += array[i];
             }
+
             return sumArray;
         }
+
         return 0;
     }
 

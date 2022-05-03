@@ -16,11 +16,11 @@ public class OddEvenTest {
     @Test
     public void testGetOddOrEvenNegativeOddNumber() {
 
-        Long a = -345l;
+        Long number = -345l;
         String expectedResult = "Odd";
 
         OddEven oddEven = new OddEven();
-        String actualResult = oddEven.getOddOrEven(a);
+        String actualResult = oddEven.getOddOrEven(number);
         Assertions.assertEquals(expectedResult, actualResult);
     }
 

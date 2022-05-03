@@ -52,20 +52,19 @@ public class Utils {
 
     /** 3  принимает на вход массив целых чисел, и сортирует элементы массива в порядке возрастания. */
     public static int[] getSortArray(int[] array) {
-        if (array.length < 0) {
+        if (array.length <= 0) {
             return array;
         }
         int temp = 0;
         for (int i = 0; i < array.length; i++) {
-            for (int j = i +1 ; j < array.length; j++) {
-                if (array[i] > array[j]) {
-                    temp = array[i];
-                    array[i] = array[j];
+            for (int j = array.length - 1; j > i; j--) {
+                if (array[j - 1] > array[j]) {
+                    temp = array[j - 1];
+                    array[j - 1] = array[j];
                     array[j] = temp;
                 }
             }
         }
-        //System.out.println(Arrays.toString(array));
         return array;
     }
 

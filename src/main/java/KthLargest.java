@@ -11,7 +11,7 @@ import static Utils.Utils.getSortArray;
 public class KthLargest {
 
     public int getKthLargest(int[] array, int k) {
-        if (array.length <= 0) {
+        if (array.length <= 0 && k < 0) {
             return Integer.MIN_VALUE;
         }
         int[] ar = getSortArray(array); // отсортированный массив

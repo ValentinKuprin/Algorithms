@@ -23,7 +23,7 @@ public class SortArray {
         System.out.println(Arrays.toString(array));
         return array;
     }
-
+//
 //   public static void main(String[] args) {
 //       int[] sortArray1 = new int[]{4, 3, 7, 12, 5, 2, 9, 4, 12};
 //       System.out.println(Arrays.toString(getSortArray(sortArray1)));

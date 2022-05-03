@@ -37,7 +37,7 @@ public class BiggerValueTest {
         Assertions.assertEquals(expectedResult, actualResult);
     }
 
-    @Order(2)
+    @Order(3)
     @Test
     public void testGetBiggerValueAIsZero(){
         int a = 0;
@@ -48,4 +48,30 @@ public class BiggerValueTest {
         int actualResult = biggervalue.getBiggerValue(a, b);
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
+    @Order(3)
+    @Test
+    public void testGetBiggerValueNumberAEqualsNumberTwo(){
+        int a = 333;
+        int b = 333;
+        int expectedResult = 333;
+
+        BiggerValue biggervalue = new BiggerValue();
+        int actualResult = biggervalue.getBiggerValue(a, b);
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Order(4)
+    @Test
+    public void testGetBiggerValueNegativeNumbers(){
+        int a = -333;
+        int b = -666;
+        int expectedResult = -333;
+
+        BiggerValue biggervalue = new BiggerValue();
+        int actualResult = biggervalue.getBiggerValue(a, b);
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+
 }
