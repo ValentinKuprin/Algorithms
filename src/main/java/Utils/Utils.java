@@ -50,7 +50,7 @@ public class Utils {
         return reverseArray;
     }
 
-    /** 3  принимает на вход массив целых чисел, и сортирует элементы массива в порядке возрастания. */
+/** 3  принимает на вход массив целых чисел, и сортирует элементы массива в порядке возрастания. */
     public static int[] getSortArray(int[] array) {
         if (array.length <= 0) {
             return array;
@@ -77,6 +77,38 @@ public class Utils {
         int[] ar = Utils.getSortArray(array); // отсортированный массив
         int elementK = ar[ar.length - k];
         return  elementK;
+    }
+
+/** метод, который принимает массив целых положительных чисел больше 0, и возвращает массив уникальных чисел. */
+    public static int[] getUniqueArray(int[] array) {
+        if (array.length == 0) {
+
+            return array;
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    array[j] = -1;
+                }
+            }
+        }
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != -1) {
+                count++;
+            }
+        }
+        int count1 = 0;
+        int[] unicueArray = new int[count];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != -1) {
+                unicueArray[count1] = array[i];
+                count1++;
+            }
+        }
+
+        return unicueArray;
     }
 
 
