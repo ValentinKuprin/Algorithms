@@ -47,7 +47,7 @@ public class MinMaxAve {
 //               System.out.println(Arrays.toString(getMinMaxAve(array, 0, 7)));
 //
 //           }
-}
+}//
 
 
 

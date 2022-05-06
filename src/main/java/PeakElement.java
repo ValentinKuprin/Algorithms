@@ -37,4 +37,4 @@ public class PeakElement { // РАЗОБРАТЬСЯ С ТЕСТОМ (2, 3)
         }
         return peakElement;
     }
-}
+}//TODO: ......... не сделал крайни пик
