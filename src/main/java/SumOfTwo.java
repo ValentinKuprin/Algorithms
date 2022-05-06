@@ -5,7 +5,8 @@ import java.util.Arrays;
  Test Data:
  ({4, 3, 7, 12, 5, 2, 9, 4, 12}, 12)  → {{3, 9}, {7, 5}}    */
 public class SumOfTwo {
-    public int[][] getSumOfTwo(int[] array, int n) {
+
+    public static int[][] getSumOfTwo(int[] array, int n) {
         if (array.length > 0) {
 
             int count = 0;
@@ -35,10 +36,10 @@ public class SumOfTwo {
 
 
 
-//    public static void main(String[] args) {
-//        int[] array1 = {4, 3, 7, 12, 5, 2, 9, 4, 12};
-//        System.out.println(Arrays.deepToString((getSumOfTwo(array1, 12))));
-//
-//    }
+    public static void main(String[] args) {
+        int[] array1 = {4, 3, 7, 12, 5, 2, 9, 4, 12};
+        System.out.println(Arrays.deepToString((getSumOfTwo(array1, 12))));
+
+    }
 
 }

@@ -30,15 +30,19 @@ public class NumberOccurrences {
             System.out.println(count);
             int[][] newArray = new int[count + 1][2];
             for (int i = 0; i < getSortArray(array).length; i++) {
-            for (int j = i + 1; j < getSortArray(array).length; j++) {
-                if (getSortArray(array)[j] == getSortArray(array)[i]) {
+                for (int j = i + 1; j < getSortArray(array).length; j++) {
+                    if (getSortArray(array)[j] == getSortArray(array)[i]) {
+
+                    }
 
                 }
-
+            }
         }
 
-            return new int[]{};
-        }
+
+                return new int[]{};
+            }
+
 
 
     public static void main(String[] args) {
