@@ -1,12 +1,11 @@
-public class StringToNumbers {
+public class StringToNumbersAndSpaces {
 
-    public static String stringToNumbers(String str) {
-        
+    public String stringToNumbersAndSpaces(String str) {
         if (str != null) {
             if (!str.isEmpty()) {
                 String numbers = "";
                 for (int i = 0; i < str.length(); i++) {
-                    if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+                    if (str.charAt(i) >= '0' && str.charAt(i) <= '9' || str.charAt(i) == ' ') {
                         numbers += str.charAt(i);
                     }
                 }
@@ -23,8 +22,9 @@ public class StringToNumbers {
 
         return "null";
     }
-
-    public static void main(String[] args) {
-        System.out.println(stringToNumbers("qwer 1234 gh @#$%^&'"));
-    }
+//
+//    public static void main(String[] args) {
+//        System.out.println(stringToNumbersAndSpaces("qwer 1234 gh @#$%^&'"));
+//    }
 }
+

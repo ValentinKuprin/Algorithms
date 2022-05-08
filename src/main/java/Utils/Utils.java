@@ -111,6 +111,29 @@ public class Utils {
         return unicueArray;
     }
 
+    /**   Проверка строки на null  */
+    public static boolean stringIsNotNull(String str) {
+        if (str != null) {
+
+            return true;
+        }
+
+            return false;
+        }
+
+
+    /** Проверка на пустую строку */
+
+    public static boolean stringIsEmpty(String str) {
+        if (!str.isEmpty()) {
+
+            return true;
+        }
+
+        return false;
+    }
+
+
 
 }
 
