@@ -18,9 +18,7 @@ public class CountWords {
 //                   if (str.charAt(i) ==  ',') {
 //                       str.charAt(i-1) = ;
 //                   }
-
 //               }
-
                 String[] array = str.toLowerCase().replace(",", "").split(" ");
                 word = word.toLowerCase();
                 int count = 0;
@@ -37,6 +35,20 @@ public class CountWords {
         }
         return -1;
     }
+
+//    public static int countWordsV2(String str, String word) {
+//        str = str.trim().toLowerCase();
+//
+//        int index = str.indexOf(word.toLowerCase());
+//        int count = 0;
+//        while (index != -1) {
+//            count++;
+//
+//            index = str.indexOf(word.toLowerCase(), index + 1);
+//        }
+//        return count;
+//
+//    } v2
 
 //    public static void main(String[] args) {
 //
