@@ -14,7 +14,7 @@ public class StartsWithLetter {
                            || strArr[i].substring(0, 1).equals(letter.toUpperCase())) {
                     //   if (strArr[i].substring(0, 1).compareTo(letter)) {}
 
-                        result += strArr[i] + ", ";
+                        result += strArr[i] + ", "; //TODO: last 3apyataya
                     }
                 }
 
