@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class SortArray {
 
     public int[] getSortArray(int[] array) {
-        if (array.length <= 0) {
+        if (array.length == 0) {
             return array;
         }
         int temp = 0;

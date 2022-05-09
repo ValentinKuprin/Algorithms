@@ -19,7 +19,7 @@ public class PeakElementTest {
     @Test
     public void testPeakElementNegative () {
         int[] array = {-3, 2, 7, 5, 1, 9, -23, 1};
-        int[] expectedResult = {7, 9};
+        int[] expectedResult = {7, 9, 1};
 
         PeakElement peakElement = new PeakElement();
         int[] actualResult = peakElement.getPeakElement(array);

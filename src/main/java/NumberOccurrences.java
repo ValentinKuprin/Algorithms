@@ -10,16 +10,13 @@ import static Utils.Utils.getSortArray;
 
 public class NumberOccurrences {
 
-    public static int[] getNumberOccurrences(int[] array) {
+    public int[][] getNumberOccurrences(int[] array) {
         if (array.length > 0) {
-            getSortArray(array); // сортируем массив по возрастанию.
-
             int count = 0;
-            System.out.println(Arrays.toString(getSortArray(array)));
-
-            for (int i = 0; i < getSortArray(array).length; i++) {
-                for (int j = i + 1; j < getSortArray(array).length; j++) {
-                    if (getSortArray(array)[j] == getSortArray(array)[i]) {
+            int[] sortArr = getSortArray(array);
+            for (int i = 0; i < sortArr.length; i++) {
+                for (int j = i + 1; j < sortArr.length; j++) {
+                    if (array[j] == array[i]) {
                         break;
                     } else {
                         count++;
@@ -27,32 +24,41 @@ public class NumberOccurrences {
                     }
                 }
             }
-            System.out.println(count);
-            int[][] newArray = new int[count + 1][2];
-            for (int i = 0; i < getSortArray(array).length; i++) {
-                for (int j = i + 1; j < getSortArray(array).length; j++) {
-                    if (getSortArray(array)[j] == getSortArray(array)[i]) {
+          //  System.out.println(count);
+            int[][] arr = new int[count + 1][2];
+            int number = 0;
+            int sum = 0;
 
+            for (int i = 0; i < sortArr.length; i += sum) {
+                arr[number][0] = array[i];
+                sum = 0;
+
+                for (int j = 0; j < sortArr.length; j++) {
+                    if (array[j] == array[i]) {
+                        sum++;
                     }
-
                 }
+                arr[number][1] = sum;
+                number++;
+
             }
+
+            return arr;
+
         }
 
-
-                return new int[]{};
-            }
-
+        return new int[][]{};
+    }
 
 
-    public static void main(String[] args) {
-
-        int[] array = {3, 2, 5, 3, 1, 5, 4, 2, 1, 4, 5, 3, 2, 1, 4, 5, 3, 2, 1};
-
-        System.out.println(Arrays.toString(getNumberOccurrences(array)));
-
-    }//TODO: .........
-
-
-
+//    public static void main(String[] args) {
+//
+//        int[] array = {3, 2, 5, 3, 1, 5, 4, 2, 1, 4, 5, 3, 2, 1, 4, 5, 3, 2, 1};
+//
+//        System.out.println(Arrays.deepToString((getNumberOccurrences(array))));
+//TODO: Повторить !!
 }
+
+
+
+

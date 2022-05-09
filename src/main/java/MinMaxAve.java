@@ -10,7 +10,7 @@ public class MinMaxAve {
 
     public static int[] getMinMaxAve(int[] array, int a, int b) {
         if (array != null) { // array != null || array.length > 0 почему ломает ?! тест падает на пустом массиве
-            if (array.length > 0 && a <= b && a >= 0 && b > 0 && b < array.length) {
+            if (array.length > 0 && a <= b && a >= 0 && b >= 0 && b < array.length) {
                 if ( a > b){
                     int temp = a;
                     a = b;

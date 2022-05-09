@@ -166,5 +166,32 @@ public class MinMaxAveTest_NAPICA {
 //TODO: придумать имя
     }
 
+    @Order(11)
+    @Test
+    public void testMinMaxAveArrayIndexsIsZero() { // индекс б отрицательный
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8};//?
+        int a = 0;
+        int b = 0;
+        int[] expectedResult = {1, 1, 1};
+
+        MinMaxAve minMaxAve = new MinMaxAve();
+        int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+
+    }
+
+    @Order(12)
+    @Test
+    public void testMinMaxAveArray() { // индекс б отрицательный
+        int[] array = {4, 7, 1, 5, 9, 2, 3, 6, 8};//?
+        int a = 1;
+        int b = 10;
+        int[] expectedResult = {};
+
+        MinMaxAve minMaxAve = new MinMaxAve();
+        int[] actualResult = minMaxAve.getMinMaxAve(array, a, b);
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+
+    }
 
 }

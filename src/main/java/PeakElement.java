@@ -6,7 +6,46 @@
  */
 public class PeakElement { // РАЗОБРАТЬСЯ С ТЕСТОМ (2, 3)
 
-    public int[] getPeakElement(int[] array) {
+    public static int[] getPeakElement(int[] array) {
+
+        if (array.length > 0) {
+            int count = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (i == 0 && array[i] > array[i + 1]) {
+                    count++;
+                } else if (i > 0 && i < array.length - 1
+                        && array[i] > array[i - 1] && array[i] > array[i + 1]) {
+                    count++;
+                } else if (i == array.length - 1 && array[array.length - 1] > array[array.length - 2]) {
+                    count++;
+
+                }
+            }
+            // System.out.println(count);
+            int[] pealElement = new int[count];
+            int j = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (i == 0 && array[i] > array[i + 1]) {
+                    pealElement[j] = array[0];
+                    j++;
+                } else if (i > 0 && i < array.length - 1
+                        && array[i] > array[i - 1] && array[i] > array[i + 1]) {
+                    pealElement[j] = array[i];
+                    j++;
+                } else if (i == array.length - 1 && array[array.length - 1] > array[array.length - 2]) {
+                    pealElement[j] = array[array.length - 1];
+                    j++;
+                }
+            }
+
+            return pealElement;
+
+        }
+        return new int[]{};
+
+
+    }
+/*    public int[] getPeakElement(int[] array) {
         if (array.length <= 0) {
             return new int[]{};
         }
@@ -18,6 +57,7 @@ public class PeakElement { // РАЗОБРАТЬСЯ С ТЕСТОМ (2, 3)
                 }
             } else if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
                 count++;
+
                 //  System.out.println(count);
             }
         }
@@ -36,5 +76,5 @@ public class PeakElement { // РАЗОБРАТЬСЯ С ТЕСТОМ (2, 3)
             }
         }
         return peakElement;
-    }
+    }*/
 }//TODO: ......... не сделал крайни пик
