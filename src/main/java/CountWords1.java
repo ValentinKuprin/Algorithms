@@ -13,9 +13,9 @@ public class CountWords1 {
             count++;
 
             index = str.indexOf(word.toLowerCase(), index +1);
-            if (index + 1 != " ") {
+       //     if (index + 1 != " ") {
 
-            }
+         //   }
         }
         return count;
 

@@ -1,51 +1,47 @@
 import java.util.Arrays;
 
+/**Test Data:
+ “Carrot”, “carwash” → “car”
+ “Noob”, “Schmooze” → “oo”
+ */
 public class qwerty {
 
-    public static int[] getStringToNumbers(String str) {
-        if (str != null) {
-            if (!str.isEmpty()) {
-                String number = "";
-                for (int i = 0; i < str.length(); i++) {
-                    if ((str.charAt(i) >= '0' && str.charAt(i) <= '9')) {
-                        number += (str.charAt(i) + " ");
+    public static String stringIntersection(String str, String str1) {
+
+        str = str.toLowerCase();
+        str1 = str1.toLowerCase();
+        String podStr = str1.substring(0, str1.length());
+        String result = "";
+        String result1 = "";
+
+        //  return podStr;
 
 
-                    }
-                }
-                if (number.isEmpty()) {
-                    return new int[]{};
-                }
-                System.out.println(number);
-                String[] array = number.split(" ");
-                int j = 0;
-                int[] arrayNum = new int[array.length];
-                for (int i = 0; i < array.length; i++) {
-                    arrayNum[j] = Integer.parseInt(array[i]);
-                    j++;
-                }
+        for (int i = str1.length(); i >= 0; ) {
+            if (!str.contains(str1.substring(0, i))) {
+                result1 = str1.substring(0, i);
+                System.out.println(result1);
+                i--;
+            } else {
+                result = str1.substring(0, i);
 
-                return arrayNum;
+                return result;
             }
-
-            return new int[]{};//"Пустая строка"
         }
 
+        return "Совпадений нет";
+    }
 
-        return new int[]{};//"null"
-    } //TODO:... // version 2
+
+
 
     public static void main(String[] args) {
-        System.out.println((Arrays.toString(getStringToNumbers("1, зд9ж4д6ло8940ж6р8ожорж"))));
-        System.out.println((Arrays.toString(getStringToNumbers("hfgjghkhjkjhkggk"))));
-        System.out.println((Arrays.toString(getStringToNumbers("1, njtyhdtryrty, 5"))));
-           System.out.println((Arrays.toString(getStringToNumbers(""))));
-            System.out.println((Arrays.toString(getStringToNumbers(null))));
-        System.out.println((Arrays.toString(getStringToNumbers("12"))));
-        System.out.println((Arrays.toString(getStringToNumbers("1, 2, 3, 4, 5"))));
-        System.out.println((Arrays.toString(getStringToNumbers("1, 2, 3, 4, 5"))));
-        System.out.println((Arrays.toString(getStringToNumbers("1, 2, 3, 4, 5"))));
-        System.out.println((Arrays.toString(getStringToNumbers("1, 2, 3, 4, 5"))));
+
+        String str = "Carrot";
+        String str1 = "carwash";
+      //  System.out.println(str1.substring(0, str1.length()));
+
+        System.out.println(stringIntersection(str, str1));
     }
 
 }
