@@ -1,6 +1,3 @@
-
-import Utils.Utils;
-
 import static Utils.Utils.*;
 
 /**
@@ -12,7 +9,7 @@ public class CountWords {
 
     public int countWords(String str, String word) {
         if (stringIsNotNull(str) && stringIsNotNull(word)) {
-            if (stringIsEmpty(str) && stringIsEmpty(word)) {
+            if (stringIsNotEmpty(str) && stringIsNotEmpty(word)) {
 
 //               for (int i = 0; i < str.length(); i++) {
 //                   if (str.charAt(i) ==  ',') {

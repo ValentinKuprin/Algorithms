@@ -1,7 +1,5 @@
 package Utils;
 
-import java.util.Arrays;
-
 public class Utils {
     /**  1  Возвращает массив уникальных чисел.
      *
@@ -124,7 +122,7 @@ public class Utils {
 
     /** Проверка на пустую строку */
 
-    public static boolean stringIsEmpty(String str) {
+    public static boolean stringIsNotEmpty(String str) {
         if (!str.isEmpty()) {
 
             return true;
@@ -137,7 +135,7 @@ public class Utils {
 
     public String removeDuplicates(String input) {
         if (Utils.stringIsNotNull(input)) {
-            if (Utils.stringIsEmpty(input)) {
+            if (Utils.stringIsNotEmpty(input)) {
                 String newStr = input.trim().toLowerCase();
                 String output = "";
                 for (int i = 0; i < newStr.length(); i++) {

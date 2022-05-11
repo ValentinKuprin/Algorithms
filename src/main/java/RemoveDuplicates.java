@@ -8,7 +8,7 @@ public class RemoveDuplicates {
 
     public String removeDuplicates(String input) {
         if (Utils.stringIsNotNull(input)) {
-            if (Utils.stringIsEmpty(input)) {
+            if (Utils.stringIsNotEmpty(input)) {
                 String newStr = input.trim().toLowerCase();
                 String output = "";
 

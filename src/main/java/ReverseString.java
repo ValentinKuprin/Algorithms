@@ -9,7 +9,7 @@ public class ReverseString {
 
     public String reverseString(String str) {
         if (Utils.stringIsNotNull(str)) {
-            if (Utils.stringIsEmpty(str)) {
+            if (Utils.stringIsNotEmpty(str)) {
                 String str1 = "";
                 for (int i = str.length()-1; i >= 0; i--) {
                     str1 += str.trim().charAt(i);

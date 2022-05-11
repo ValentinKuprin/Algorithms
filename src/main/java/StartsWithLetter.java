@@ -6,7 +6,7 @@ public class StartsWithLetter {
 
     public String startsWithLetter(String str, String letter) {
         if (Utils.stringIsNotNull(str) && Utils.stringIsNotNull(letter)) {
-            if (Utils.stringIsEmpty(str) || Utils.stringIsEmpty(letter)) {
+            if (Utils.stringIsNotEmpty(str) || Utils.stringIsNotEmpty(letter)) {
                String[] strArr = str.replace(",", "").replace(".", "").split(" ");
                String result = "";
                 for (int i = 0; i < strArr.length; i++) {
